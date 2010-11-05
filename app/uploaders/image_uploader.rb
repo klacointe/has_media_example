@@ -1,0 +1,2 @@
+class ImageUploader < MediumUploader
+end

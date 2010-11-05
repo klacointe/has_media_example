@@ -4,8 +4,13 @@ HasMedia.directory_path = "media"
 # Set the base uri to access media
 HasMedia.directory_uri = "/media"
 
-# Set the allowed medium types for your application (used if no :only option given)
-HasMedia.medium_types = [Image, Avatar]
+# Set the allowed medium types for your application,
+# if no :only option is defined on model, it will try 
+# to find a class to use with the following mime types
+HasMedia.medium_types = {
+  "Image" => ["image/jpeg"],
+  "Avatar" => ["image/png", "image/jpeg"]
+}
 
 # Set the extension of encoded files to use for each medium types (used in file_uri and file_path)
 HasMedia.encoded_extensions = {
@@ -13,7 +18,7 @@ HasMedia.encoded_extensions = {
   :avatar => 'png'
 }
 
-# Require you uploaders
+# Require your uploaders
 Dir.glob(File.dirname(__FILE__) + '/../app/uploaders/*.rb').each do |uploader|
   require uploader
 end
