@@ -1,7 +1,7 @@
 PATH
   remote: /home/klacointe/dev/gems/has_media
   specs:
-    has_media (0.2.0)
+    has_media (0.2.1)
       activerecord (~> 3.0.0)
       activesupport (~> 3.0.0)
       carrierwave-rails3 (~> 0.4.5)
