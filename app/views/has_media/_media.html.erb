@@ -1,0 +1,5 @@
+<%- media = [media] unless media.is_a?(Array) %>
+
+<%- media.each do |medium| %>
+  <%= render :partial => 'has_media/medium', :locals => {:medium => medium} %>
+<%- end %>

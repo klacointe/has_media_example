@@ -16,10 +16,17 @@
   <%= f.text_field :title %>
   </p>
 
-  <p>
-  <%= f.label :avatar %>
-  <%= f.file_field :avatar %>
-  </p>
+  <%= render :partial => "has_media/media_fields",
+    :locals => {
+      :object => @directory,
+      :context => :avatar
+  } %>
+
+  <%= render :partial => "has_media/media_fields",
+    :locals => {
+      :object => @directory,
+      :context => :images 
+  } %>
 
   <div class="actions">
     <%= f.submit %>
