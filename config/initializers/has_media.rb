@@ -1,5 +1,5 @@
 # Set the directory path to use to store media
-HasMedia.directory_path = "media"
+HasMedia.directory_path = Rails.root + "public/media"
 
 # Set the base uri to access media
 HasMedia.directory_uri = "/media"
