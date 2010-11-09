@@ -6,8 +6,7 @@ gem 'rails', '3.0.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-#gem 'has_media',    :git => 'http://github.com/klacointe/has_media.git', :branch => 'rails3'
-gem 'has_media',    :path => "/home/klacointe/dev/gems/has_media/"
+gem 'has_media',    :git => 'http://github.com/klacointe/has_media.git', :branch => 'rails3'
 gem 'rmagick',      '~>2.13'
 gem 'resque',       '~>1.10'
 

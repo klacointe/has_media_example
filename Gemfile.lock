@@ -1,5 +1,7 @@
-PATH
-  remote: /home/klacointe/dev/gems/has_media
+GIT
+  remote: http://github.com/klacointe/has_media.git
+  revision: c7e4dda7d29c4145b7e2d88a28e7771ba5406ff4
+  branch: rails3
   specs:
     has_media (0.2.4)
       activerecord (~> 3.0.0)
