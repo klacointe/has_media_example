@@ -1,6 +1,8 @@
-<div id="<%= generate_uid(object, context) %>">
+<div id="<%= generate_uid(:object => object, :context => context) %>">
   <%= render :partial => 'has_media/media', :locals => {
-    :media => object.send(context)
+    :object => object,
+    :context => context,
+    :readonly => false
   } %>
 
   <%= render :partial => 'has_media/medium_field', 

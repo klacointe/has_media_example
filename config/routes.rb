@@ -1,6 +1,10 @@
 HasMediaExample::Application.routes.draw do
   resources :directories
 
+  resources :media, :only => [:destroy]
+
+  root :to => "directories#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
