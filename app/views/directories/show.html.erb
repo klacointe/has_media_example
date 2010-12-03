@@ -5,7 +5,9 @@
 
   <fieldset>
     <legend>Avatar (CarrierWave & RMagick encoded)</legend>
-    <h2><%= @directory.avatar.filename %></h2>
+    <%- unless @directory.avatar.nil? %>
+      <h2><%= @directory.avatar.filename %></h2>
+    <%- end %>
     thumb :<%= image_tag @directory.avatar.file_url(:thumb) %>
     thumb sepia :<%= image_tag @directory.avatar.file_url(:thumb_sepia) %>
   </fieldset>
