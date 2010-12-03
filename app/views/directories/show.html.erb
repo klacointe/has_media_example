@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+  <h1><%= @directory.title %></h1>
+  <fieldset>
+    <legend>Avatar (CarrierWave & RMagick encoded)</legend>
+    <h2><%= @directory.avatar.filename %></h2>
+    thumb :<%= image_tag @directory.avatar.file_url(:thumb) %>
+    thumb sepia :<%= image_tag @directory.avatar.file_url(:thumb_sepia) %>
+  </fieldset>
+  <fieldset>
+    <legend>Images (Resque & RMagick encoded)</legend>
+    <%- @directory.images.each do |image| %>
+      <h2><%= image.filename %></h2>
+      crop_200 :<%= image_tag image.file_uri(:crop_200) %>
+      fill_200 :<%= image_tag image.file_uri(:fill_200) %>
+    <%- end %>
+  </fieldset>
+</div>
 
 <%= link_to 'Edit', edit_directory_path(@directory) %> |
 <%= link_to 'Back', directories_path %>

@@ -5,6 +5,6 @@ class Image < Medium
   private 
 
   def enqueue_encoding
-    Resque.enqueue(EncodeImage, File.join(Rails.root, self.original_file_path))
+    Resque.enqueue(EncodeImage, File.join(self.original_file_path))
   end 
 end
