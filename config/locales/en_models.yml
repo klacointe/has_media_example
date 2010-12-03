@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      directory: "Directory"
+    attributes:
+      directory:
+        title: "Title"
+        images: "Images"
+        avatar: "Avatar"
+      
