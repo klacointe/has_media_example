@@ -23,7 +23,21 @@
     <legend>Audios (Resque & ffmpeg encoded)</legend>
     <%- @directory.audios.each do |audio| %>
       <h2><%= audio.filename %></h2>
-      re encoded :<%= link_to audio.file_uri(:encoded), audio.file_uri(:encoded) %>
+      re encoded :
+      <audio controls="true">
+        <source src="<%= audio.file_uri(:encoded) %>" />
+      </audio>
+    <%- end %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Videos (Resque & ffmpeg encoded)</legend>
+    <%- @directory.videos.each do |video| %>
+      <h2><%= video.filename %></h2>
+      re encoded :
+      <video controls="true">
+        <source src="<%= video.file_uri(:encoded) %>" />
+      </video>
     <%- end %>
   </fieldset>
 

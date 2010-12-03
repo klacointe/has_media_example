@@ -16,11 +16,25 @@
   <%= f.text_field :title %>
   </p>
 
-  <%= has_media_field @directory, :avatar %>
+  <fieldset>
+    <legend>Avatar</legend>
+    <%= has_media_field @directory, :avatar %>
+  </fieldset>
 
-  <%= has_media_field @directory, :images %>
+  <fieldset>
+    <legend>Images</legend>
+    <%= has_media_field @directory, :images %>
+  </fieldset>
 
-  <%= has_media_field @directory, :audios %>
+  <fieldset>
+    <legend>Audios</legend>
+    <%= has_media_field @directory, :audios %>
+  </fieldset>
+
+  <fieldset>
+    <legend>Videos</legend>
+    <%= has_media_field @directory, :videos %>
+  </fieldset>
 
   <div class="actions">
     <%= f.submit %>

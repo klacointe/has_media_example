@@ -10,14 +10,16 @@ HasMedia.directory_uri = "/media"
 HasMedia.medium_types = {
   "Image"   => ["image/jpeg"],
   "Avatar"  => ["image/png", "image/jpeg"],
-  "Audio"   => ["audio/mpeg", "audio/x-wav", "audio/ogg"]
+  "Audio"   => ["audio/mpeg", "audio/x-wav", "audio/ogg"],
+  "Video"   => []
 }
 
 # Set the extension of encoded files to use for each medium types (used in file_uri and file_path)
 HasMedia.encoded_extensions = {
   :image  => 'jpg',
   :avatar => 'png',
-  :audio  => 'mp3'
+  :audio  => 'ogg',
+  :video  => 'ogg'
 }
 
 # Require your uploaders

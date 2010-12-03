@@ -1,0 +1,2 @@
+class VideoUploader < MediumUploader
+end
