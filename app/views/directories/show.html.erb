@@ -26,8 +26,9 @@
     <%- @directory.audios.each do |audio| %>
       <h2><%= audio.filename %></h2>
       re encoded :
-      <audio controls="true">
+      <audio controls="controls" preload="true">
         <source src="<%= audio.file_uri(:encoded) %>" />
+        You browser does not support HTML5
       </audio>
     <%- end %>
   </fieldset>
@@ -37,8 +38,9 @@
     <%- @directory.videos.each do |video| %>
       <h2><%= video.filename %></h2>
       re encoded :
-      <video controls="true">
+      <video controls="controls" preload="true">
         <source src="<%= video.file_uri(:encoded) %>" />
+        You browser does not support HTML5
       </video>
     <%- end %>
   </fieldset>
