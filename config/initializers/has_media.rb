@@ -8,14 +8,16 @@ HasMedia.directory_uri = "/media"
 # if no :only option is defined on model, it will try 
 # to find a class to use with the following mime types
 HasMedia.medium_types = {
-  "Image" => ["image/jpeg"],
-  "Avatar" => ["image/png", "image/jpeg"]
+  "Image"   => ["image/jpeg"],
+  "Avatar"  => ["image/png", "image/jpeg"],
+  "Audio"   => ["audio/mpeg", "audio/x-wav", "audio/ogg"]
 }
 
 # Set the extension of encoded files to use for each medium types (used in file_uri and file_path)
 HasMedia.encoded_extensions = {
-  :image => 'jpg',
-  :avatar => 'png'
+  :image  => 'jpg',
+  :avatar => 'png',
+  :audio  => 'mp3'
 }
 
 # Require your uploaders

@@ -2,12 +2,14 @@
 
 <div>
   <h1><%= @directory.title %></h1>
+
   <fieldset>
     <legend>Avatar (CarrierWave & RMagick encoded)</legend>
     <h2><%= @directory.avatar.filename %></h2>
     thumb :<%= image_tag @directory.avatar.file_url(:thumb) %>
     thumb sepia :<%= image_tag @directory.avatar.file_url(:thumb_sepia) %>
   </fieldset>
+
   <fieldset>
     <legend>Images (Resque & RMagick encoded)</legend>
     <%- @directory.images.each do |image| %>
@@ -16,6 +18,15 @@
       fill_200 :<%= image_tag image.file_uri(:fill_200) %>
     <%- end %>
   </fieldset>
+
+  <fieldset>
+    <legend>Audios (Resque & ffmpeg encoded)</legend>
+    <%- @directory.audios.each do |audio| %>
+      <h2><%= audio.filename %></h2>
+      re encoded :<%= link_to audio.file_uri(:encoded), audio.file_uri(:encoded) %>
+    <%- end %>
+  </fieldset>
+
 </div>
 
 <%= link_to 'Edit', edit_directory_path(@directory) %> |
